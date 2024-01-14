@@ -31,9 +31,14 @@ Firstly, my active engagement in Krav Maga, Brazilian Jiu Jitsu, and kickboxing 
 
 ## Conclusion 
 ### About DataTalksClub and ML ZoomCamp
+DataTalksClub is a dynamic community focused on data science and machine learning discussions. Central to this community is the ML Zoomcamp, an interactive learning initiative. Tailored for all skill levels, ML Zoomcamp offers live Zoom sessions covering fundamental machine learning concepts, practical applications, and hands-on projects. Led by industry experts, participants gain valuable insights and skills for tackling data science challenges. Beyond education, ML Zoomcamp fosters networking and collaboration, creating a supportive environment for individuals eager to advance in the ever-evolving field of machine learning.
+
+DataTalksClub: https://datatalks.club/
+
+Machine Learning Zoomcamp: https://github.com/DataTalksClub/machine-learning-zoomcamp/
 
 ## Social Learning In Public
-Social learning in public" refers to the intentional sharing of your project progress, findings, and research across various social media and publishing platforms. Instead of keeping your work private, you choose to make it publicly accessible to a wider audience. This transparent and open dissemination of information aligns with the principles of knowledge sharing, fostering a collaborative and inclusive environment for discussions, insights, and shared learning experiences.
+"Social learning in public" refers to the intentional sharing of your project progress, findings, and research across various social media and publishing platforms. Instead of keeping your work private, you choose to make it publicly accessible to a wider audience. This transparent and open dissemination of information aligns with the principles of knowledge sharing, fostering a collaborative and inclusive environment for discussions, insights, and shared learning experiences.
 
 
 
