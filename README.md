@@ -1,6 +1,7 @@
 # ML Zoomcamp Capstone 2 project: Ultimate Fighting Championship
->Data Set: https://www.kaggle.com/datasets/asaniczka/ufc-fighters-statistics/data
->Technologies Used: Python, 
+> Data Set: https://www.kaggle.com/datasets/asaniczka/ufc-fighters-statistics/data
+
+> Technologies Used: Python, 
 
 ## Table of Contents
 1. [Problem Description](#problem-description)
@@ -22,11 +23,32 @@
 Explore the dynamic world of Mixed Martial Arts (MMA), a widely followed combat sport where athletes showcase their skills in various disciplines. At the forefront of MMA stands the Ultimate Fighting Championship (UFC), recognized as the pinnacle organization in the realm of mixed martial arts.
 ### About the Dataset 
 Delve into this comprehensive dataset, meticulously capturing the statistical insights of UFC fighters. From their victories and defeats to draws, delve into the intricacies of their physical attributes, adopted fighting styles, and notable career achievements. Gain a deeper understanding of the fighters' journeys within the UFC and uncover the nuanced details that contribute to their standing in this exhilarating sport.
-### The Problem
-> The challenge at hand is to address the lack of accurate and nuanced predictions for fight outcomes in mixed martial arts (MMA), particularly within the realm of UFC matches. The principal objective is to overcome the existing limitations by identifying and comprehending intricate patterns within the data, ultimately aiming to enhance the precision and reliability of predicting UFC fight outcomes. The problem statement centers on the need to design and implement machine learning models capable of effectively analyzing diverse fighter metrics, including win-loss records, physical attributes, fighting styles, and career achievements
-### The Solution
->  The primary objective is to train predictive models capable of forecasting fight outcomes. Leveraging the extensive dataset containing comprehensive fighter statistics, the project aims to develop sophisticated models that can analyze factors such as a fighter's win-loss record, physical attributes, fighting style, and career achievements to accurately predict the likely result of a given match. This endeavor seeks to enhance our understanding of the multifaceted dynamics that influence fight results and pave the way for more informed analyses within the realm of combat sports.
-### Project Inspiration 
+
+The following key features are utilized:
+* 'name'
+* 'nickname'
+* 'wins'
+* 'losses'
+* 'draws'
+* 'height_cm'
+* 'weight_in_kg'
+*  'reach_in_cm'
+*  'stance'
+*  'date_0f_birth'
+*  'significant_strikes_landed_per_minute'
+*  'significant_striking_accuracy'
+*  'significant_strikes_absorbed_per_minute'
+*  'significant_strike_defence'
+*  'average_takedowns_landed_per_15_minutes'
+*  'takedown_accuracy'
+*  'takedown_defense'
+*  'average_submissions_attempted_per_15_minutes'
+
+### The Problem 🧠
+The challenge at hand is to address the lack of accurate and nuanced predictions for fight outcomes in mixed martial arts (MMA), particularly within the realm of UFC matches. The principal objective is to overcome the existing limitations by identifying and comprehending intricate patterns within the data, ultimately aiming to enhance the precision and reliability of predicting UFC fight outcomes. The problem statement centers on the need to design and implement machine learning models capable of effectively analyzing diverse fighter metrics, including win-loss records, physical attributes, fighting styles, and career achievements
+### The Solution 🤓
+The primary objective is to train predictive models capable of forecasting fight outcomes. Leveraging the extensive dataset containing comprehensive fighter statistics, the project aims to develop sophisticated models that can analyze factors such as a fighter's win-loss record, physical attributes, fighting style, and career achievements to accurately predict the likely result of a given match. This endeavor seeks to enhance our understanding of the multifaceted dynamics that influence fight results and pave the way for more informed analyses within the realm of combat sports.
+### Project Inspiration 💡
 Firstly, my active engagement in Krav Maga, Brazilian Jiu Jitsu, and kickboxing has fostered a profound appreciation for the intricate dynamics of MMA. Secondly, recognizing the paramount importance of self-defense as a vital life skill has served as a driving force. Lastly, acknowledging the holistic benefits of physical strength and exercise for both the mind and body, the project aims to explore the intersection of fitness, mental well-being, and predictive analytics in the context of UFC fights.
 
 ## Conclusion 
