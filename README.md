@@ -25,24 +25,24 @@ Explore the dynamic world of Mixed Martial Arts (MMA), a widely followed combat 
 Delve into this comprehensive dataset, meticulously capturing the statistical insights of UFC fighters. From their victories and defeats to draws, delve into the intricacies of their physical attributes, adopted fighting styles, and notable career achievements. Gain a deeper understanding of the fighters' journeys within the UFC and uncover the nuanced details that contribute to their standing in this exhilarating sport.
 
 The following key features are utilized:
-* 'name'
-* 'nickname'
-* 'wins'
-* 'losses'
-* 'draws'
-* 'height_cm'
-* 'weight_in_kg'
-*  'reach_in_cm'
-*  'stance'
-*  'date_0f_birth'
-*  'significant_strikes_landed_per_minute'
-*  'significant_striking_accuracy'
-*  'significant_strikes_absorbed_per_minute'
-*  'significant_strike_defence'
-*  'average_takedowns_landed_per_15_minutes'
-*  'takedown_accuracy'
-*  'takedown_defense'
-*  'average_submissions_attempted_per_15_minutes'
+* >'name': The fighter's full name.
+* >'nickname': A commonly known alias or nickname associated with the fighter.
+* >'wins': The total number of victories in the fighter's career.
+* >'losses': The total number of losses in the fighter's career.
+* >'draws': The total number of draws or ties in the fighter's career.
+* >'height_cm': The fighter's height in centimeters.
+* >'weight_in_kg': The fighter's weight in kilograms.
+* >'reach_in_cm': The fighter's reach, measured in centimeters.
+* >'stance': The preferred fighting stance of the fighter (orthodox, southpaw, etc.).
+* >'date_of_birth': The fighter's date of birth.
+* >'significant_strikes_landed_per_minute': The average number of significant strikes landed by the fighter per minute.
+* >'significant_striking_accuracy': The percentage of significant strikes that the fighter lands successfully.
+* >'significant_strikes_absorbed_per_minute': The average number of significant strikes absorbed by the fighter per minute.
+* >'significant_strike_defence': The percentage of significant strikes that the fighter successfully defends against.
+* >'average_takedowns_landed_per_15_minutes': The average number of successful takedowns by the fighter per 15 minutes.
+* >'takedown_accuracy': The percentage of takedown attempts by the fighter that are successful.
+* >'takedown_defense': The percentage of takedown attempts against the fighter that are defended successfully.
+* >'average_submissions_attempted_per_15_minutes': The average number of submission attempts by the fighter per 15 minutes.
 
 ### The Problem 🧠
 The challenge at hand is to address the lack of accurate and nuanced predictions for fight outcomes in mixed martial arts (MMA), particularly within the realm of UFC matches. The principal objective is to overcome the existing limitations by identifying and comprehending intricate patterns within the data, ultimately aiming to enhance the precision and reliability of predicting UFC fight outcomes. The problem statement centers on the need to design and implement machine learning models capable of effectively analyzing diverse fighter metrics, including win-loss records, physical attributes, fighting styles, and career achievements
