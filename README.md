@@ -1,7 +1,7 @@
 # ML Zoomcamp Capstone 2 project: Stats Smackdown: ML Predictions in MMA
 > Data Set: https://www.kaggle.com/datasets/asaniczka/ufc-fighters-statistics/data
 
-> Technologies Used: Python, Numpy, Pandas, Matplotlib, VS Code
+> Technologies Used: Python, Scikit-learn, Numpy, Pandas, Matplotlib, Wordcloud VS Code
 
 ## Table of Contents
 1. [Problem Description](#problem-description)
