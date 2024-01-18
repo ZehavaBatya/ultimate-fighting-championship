@@ -124,7 +124,25 @@ Replace your_notebook.ipynb with the name of your notebook file.
 4. This will generate a Python script in the same directory with the same name as your notebook, but with a `.py` extension.
 
 ## Reproductibility
+Downloading Project File Repository from GitHub:
+Clone Repository:
 
+Open a terminal or command prompt.
+
+Navigate to the directory where you want to store your project.
+
+Run the following command:
+`git clone <repository_url>`
+Replace <repository_url> with the URL of your GitHub repository.
+
+Example:
+
+git clone https://github.com/your-username/your-project.git
+Navigate to Project Directory:
+
+Move into the project directory:
+
+`cd your-project`
 
 
 ## Model Deployment
@@ -136,7 +154,24 @@ Open a terminal or command prompt and run the following command to install Flask
 
 `pip install Flask`
 
+Integrate with Your Project:
+Copy your Jupyter Notebook (notebook.ipynb) into the my_flask_app directory.
+
+To use your Jupyter Notebook in your Flask app, you might want to convert it into a Python script, as mentioned earlier.
+
+Run the Flask App:
+1. In the terminal, make sure you are in the the flask app directory.
+
+2. Run the Flask app:
+
+`python main.py`
+This will start the development server. You should see output indicating that the server is running.
+
+3. Open a web browser and go to `http://127.0.0.1:5000/`. You should see your Flask app's output.
+
 ![image](https://github.com/ZehavaBatya/ultimate-fighting-championship/assets/84485729/20881d32-fce2-4593-ac8a-6bfbc0a0ca91)
+
+![image](https://github.com/ZehavaBatya/ultimate-fighting-championship/assets/84485729/0c545986-7ac9-439b-a3e6-fa852dc8e483)
 
 
 ## Dependency and Environment Management
@@ -147,6 +182,9 @@ Open a terminal or command prompt and run the following command to install Flask
 ## Cloud Deployment
 
 ## Project Lessons
+1. 
+2. 
+3. 
 
 ## Project Challenges
 1.
