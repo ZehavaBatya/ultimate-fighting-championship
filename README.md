@@ -1,7 +1,7 @@
 # ML Zoomcamp Capstone 2 project: Stats Smackdown: ML Predictions in MMA
 > Data Set: https://www.kaggle.com/datasets/asaniczka/ufc-fighters-statistics/data
 
-> Technologies Used: Python, Scikit-learn, Numpy, Pandas, Matplotlib, Wordcloud VS Code
+> Technologies Used: Python, Flask, Scikit-learn, Numpy, Pandas, Matplotlib, Wordcloud, Jupyter, VS Code
 
 ## Table of Contents
 1. [Problem Description](#problem-description)
@@ -86,25 +86,27 @@ Word Cloud: Word clouds provide an intuitive and visual representation of the mo
 
 ## Model Training
 1. Logistic Regression Model
-Binary Outcome:
+> Binary Outcome:
 
 Logistic regression is particularly well-suited for binary classification problems, where the outcome variable has two possible classes. In MMA, one might be interested in predicting outcomes such as whether a fighter wins or loses a match. Logistic regression models the probability of the binary outcome, making it a natural choice for this type of prediction.
-Interpretability:
+> Interpretability:
 
 Logistic regression provides interpretable results. The coefficients in logistic regression represent the log-odds of the outcome. This makes it easy to understand the impact of each predictor variable on the probability of the event occurring. In the context of MMA, one can interpret how different fighter characteristics or match statistics contribute to the likelihood of winning a fight.
-Efficiency with Limited Data:
+> Efficiency with Limited Data:
 
 Logistic regression tends to perform well when the dataset is not extremely large. If one has a moderate-sized dataset, logistic regression can provide robust results without requiring a massive amount of data. This efficiency can be advantageous, especially if one is working with limited resources or collecting data on MMA matches, which may not be as abundant as data in some other domains.
 
 2. Decision Tree Model 
 
-Interpretability:
+> Interpretability:
 
 Decision trees offer a highly interpretable representation of decision-making processes. The model is essentially a tree-like flowchart where each node represents a decision based on a specific feature. This makes it easy to understand how the model arrives at a particular prediction. In projects related to MMA, interpretability can be crucial for gaining insights into which features or factors contribute most to predicting outcomes.
-Handling Non-linearity and Interaction:
+
+> Handling Non-linearity and Interaction:
 
 Decision trees are capable of capturing non-linear relationships and interactions between variables. In MMA, where the outcome of a match can depend on complex interactions between fighter attributes or match statistics, decision trees can be more flexible in capturing these patterns compared to linear models. They can identify intricate relationships that might be missed by simpler models.
-Feature Importance:
+
+> Feature Importance:
 
 Decision trees provide a natural way to assess the importance of different features in making predictions. By evaluating the splits in the tree, one can identify which features are most influential in determining outcomes. For a project related to MMA, understanding the importance of various fighter characteristics or match statistics can offer valuable insights into what makes a difference in winning or losing a fight.
 
@@ -125,24 +127,23 @@ Replace your_notebook.ipynb with the name of your notebook file.
 
 ## Reproductibility
 Downloading Project File Repository from GitHub:
-Clone Repository:
+1. Clone Repository:
 
 Open a terminal or command prompt.
 
 Navigate to the directory where you want to store your project.
 
 Run the following command:
-`git clone <repository_url>`
-Replace <repository_url> with the URL of your GitHub repository.
+`git clone [<repository_url>](https://github.com/ZehavaBatya/ultimate-fighting-championship/blob/main/README.md)`
 
-Example:
-
-git clone https://github.com/your-username/your-project.git
-Navigate to Project Directory:
+2. Navigate to Project Directory:
 
 Move into the project directory:
 
 `cd your-project`
+
+3. Download Kaggle set:
+ `https://www.kaggle.com/datasets/asaniczka/ufc-fighters-statistics/data`
 
 
 ## Model Deployment
@@ -165,6 +166,7 @@ Run the Flask App:
 2. Run the Flask app:
 
 `python main.py`
+
 This will start the development server. You should see output indicating that the server is running.
 
 3. Open a web browser and go to `http://127.0.0.1:5000/`. You should see your Flask app's output.
@@ -175,6 +177,24 @@ This will start the development server. You should see output indicating that th
 
 
 ## Dependency and Environment Management
+1. Create a Virtual Environment.
+Create a virtual environment in your project directory. This isolates dependencies for your project.
+
+`python -m venv venv`
+
+This command creates a virtual environment named venv.
+
+2. Activate the Virtual Environment:
+
+Activate the virtual environment. The activation command depends on your operating system:
+
+For Windows:
+`venv\Scripts\activate`
+
+For Unix or MacOS:
+`source venv/bin/activate`
+
+![image](https://github.com/ZehavaBatya/ultimate-fighting-championship/assets/84485729/7903b6f0-c02c-4529-a5e6-1a6ef4117283)
 
 
 ## Containerization
