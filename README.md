@@ -328,8 +328,8 @@ This is a simplified guide. Adjustments may be needed based on your specific app
 
 ## Future Opportunities
 1. Implement XGBoost and Random Forest models.
-2. Add more commentay and conclusions after each finding.
-3. Provide a pipfile dependecy.
+2. Add more commentary and conclusions after each finding.
+3. Provide a pipfile dependecy and document the process.
 
 ## Conclusion 
 ### About DataTalksClub and ML ZoomCamp
