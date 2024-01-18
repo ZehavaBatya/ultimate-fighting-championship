@@ -1,7 +1,7 @@
 # ML Zoomcamp Capstone 2 project: Stats Smackdown: ML Predictions in MMA
 > Data Set: https://www.kaggle.com/datasets/asaniczka/ufc-fighters-statistics/data
 
-> Technologies Used: Python, Flask, Scikit-learn, Numpy, Pandas, Matplotlib, Wordcloud, Jupyter, VS Code
+> Technologies Used: Python, Docker, AWS, Flask, Scikit-learn, Numpy, Pandas, Matplotlib, Wordcloud, Jupyter, VS Code
 
 ## Table of Contents
 1. [Problem Description](#problem-description)
@@ -134,7 +134,8 @@ Open a terminal or command prompt.
 Navigate to the directory where you want to store your project.
 
 Run the following command:
-`git clone [<repository_url>](https://github.com/ZehavaBatya/ultimate-fighting-championship/blob/main/README.md)`
+
+`git clone https://github.com/ZehavaBatya/ultimate-fighting-championship/`
 
 2. Navigate to Project Directory:
 
@@ -143,6 +144,7 @@ Move into the project directory:
 `cd your-project`
 
 3. Download Kaggle set:
+ 
  `https://www.kaggle.com/datasets/asaniczka/ufc-fighters-statistics/data`
 
 
@@ -194,22 +196,140 @@ For Windows:
 For Unix or MacOS:
 `source venv/bin/activate`
 
-![image](https://github.com/ZehavaBatya/ultimate-fighting-championship/assets/84485729/7903b6f0-c02c-4529-a5e6-1a6ef4117283)
+![image](https://github.com/ZehavaBatya/ultimate-fighting-championship/assets/84485729/c83ec887-d046-420d-a697-8246de9b3234)
+
 
 
 ## Containerization
+1. Download Docker
+
+`pip install docker`
+
+2. Install the Docker Extension for VS Code
+
+3. Build and Run Docker Containers:
+
+Create a Dockerfile in the root of your project. This file defines the configuration for building a Docker image.
+
+`Example Dockerfile:
+
+FROM python:3.9
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 5000
+
+CMD ["python", "./app.py"]`
+
+Open the Command Palette (Ctrl+Shift+P) and run the command "Docker: Build Image" to build the Docker image based on your Dockerfile.
+
+![image](https://github.com/ZehavaBatya/ultimate-fighting-championship/assets/84485729/272d3469-6894-47b0-8581-87af15736430)
+
+Once the image is built, you can run a container based on that image. Use the "Docker: Run" command from the Docker extension.
 
 ## Cloud Deployment
 
+Prerequisites:
+>AWS account.
+>Docker installed locally.
+>AWS CLI installed locally.
+>Python and pip installed locally.
+>An ECS cluster set up on your AWS account.
+
+Step 1: Dockerize Your Python Application
+***See the above steps***
+
+Step 2: Build and Push Docker Image to Amazon ECR
+Assuming you have an ECR repository created, use the following commands:
+
+# Login to ECR
+`$(aws ecr get-login --no-include-email --region <your-region>)`
+
+# Build Docker image
+`docker build -t <your-repository-uri>:<tag> .`
+
+# Tag the image
+`docker tag <your-repository-uri>:<tag> <your-repository-uri>:latest`
+
+# Push the image
+docker push <your-repository-uri>:latest
+Step 3: Create a Task Definition
+Create a file task-definition.json:
+
+`{
+  "family": "your-app",
+  "containerDefinitions": [
+    {
+      "name": "your-container",
+      "image": "<your-repository-uri>:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 5000,
+          "hostPort": 5000
+        }
+      ]
+    }
+  ]
+}`
+
+Step 4: Register the Task Definition
+
+`aws ecs register-task-definition --cli-input-json file://task-definition.json`
+Step 5: Create a Service
+Create a file ecs-service.json:
+
+`{
+  "cluster": "your-cluster-name",
+  "serviceName": "your-service",
+  "taskDefinition": "your-app",
+  "desiredCount": 1,
+  "launchType": "EC2",
+  "deploymentController": {
+    "type": "ECS"
+  }
+}`
+Step 6: Create/Update ECS Service
+
+`aws ecs create-service --cli-input-json file://ecs-service.json`
+# or
+`aws ecs update-service --cli-input-json file://ecs-service.json`
+Step 7: Access Your Application
+Get the public IP address of your EC2 instance and access your application on port 5000.
+
+This is a simplified guide. Adjustments may be needed based on your specific application and AWS setup.
+
 ## Project Lessons
-1. 
-2. 
-3. 
+1. How to execute Flask and Docker
+2. The difference between Kubernetes versus AWS
+3. Test. Test often. 
 
 ## Project Challenges
-1.
+1. AWS Usage:
+
+>Challenge: As a first-time user of AWS (Amazon Web Services), navigating through the numerous services, understanding their functionalities, and configuring them for your project can be daunting.
+>Mitigation: Utilize AWS documentation, tutorials, and forums for guidance. Break down tasks into smaller, manageable steps. Experiment in a controlled environment to avoid unintended costs.
+
+2. IPython Notebook Execution:
+
+>Challenge: Your Jupyter (IPython) notebook didn't run through as expected, indicating a learning curve in using the tool effectively.
+>Mitigation: Familiarize yourself with Jupyter Notebook functionalities, including code cells, markdown cells, and execution order. Ensure that dependencies are correctly installed and versions are compatible. Seek community forums or tutorials for specific issues.
+
+3. Selecting Machine Learning Principles:
+
+>Challenge: Identifying the appropriate machine learning principles and algorithms for your MMA (Mixed Martial Arts) project can be challenging, given the diverse range of available techniques.
+>Mitigation: Start with a clear project objective. Understand the nature of your data and the type of predictions or insights you seek. Research different machine learning algorithms and their suitability for your data. Experiment with multiple models and assess their performance to make informed choices. Consider seeking expert advice or consulting with experienced practitioners in the field.
 
 ## Future Opportunities
+1. Implement XGBoost and Random Forest models.
+2. Add more commentay and conclusions after each finding.
+3. Provide a pipfile dependecy.
 
 ## Conclusion 
 ### About DataTalksClub and ML ZoomCamp
