@@ -8,15 +8,16 @@
 3. [EDA](#eda)
 4. [Model Training](#model-training)
 5. [Exporting Notebook To Script](#notebook-to-script)
-6. [Model Deplpyment](#model-deployment)
-7. [Dependency and Envrionment Management](#dependency-and-environment-management)
-8. [Containerization](#containerization)
-9. [Cloud Deployment](#cloud-deployment)
-10. [Project Lessons](#project-lessons)
-11. [Project Challenges](#project-challenges)
-12. [Future Opportunities](#future-opportunities)
-13. [Conclusion](#conclusion)
-14. [Social Learning In Public](#social-learning-in-public)
+6. [Reproductibility](#reproductibility)
+7. [Model Deployment](#model-deployment)
+8. [Dependency and Envrionment Management](#dependency-and-environment-management)
+9. [Containerization](#containerization)
+10. [Cloud Deployment](#cloud-deployment)
+11. [Project Lessons](#project-lessons)
+12. [Project Challenges](#project-challenges)
+13. [Future Opportunities](#future-opportunities)
+14. [Conclusion](#conclusion)
+15. [Social Learning In Public](#social-learning-in-public)
 
 ## Problem Description
 ### What is MMA and UFC?
@@ -84,12 +85,62 @@ Correlation Analysis: Understanding correlations helps identify potential multic
 Word Cloud: Word clouds provide an intuitive and visual representation of the most frequent terms, which can be valuable in identifying patterns or trends, especially in text data like nicknames. It's a creative way to highlight popular aliases associated with fighters.
 
 ## Model Training
+1. Logistic Regression Model
+Binary Outcome:
 
-## Notebook To Script
+Logistic regression is particularly well-suited for binary classification problems, where the outcome variable has two possible classes. In MMA, one might be interested in predicting outcomes such as whether a fighter wins or loses a match. Logistic regression models the probability of the binary outcome, making it a natural choice for this type of prediction.
+Interpretability:
+
+Logistic regression provides interpretable results. The coefficients in logistic regression represent the log-odds of the outcome. This makes it easy to understand the impact of each predictor variable on the probability of the event occurring. In the context of MMA, one can interpret how different fighter characteristics or match statistics contribute to the likelihood of winning a fight.
+Efficiency with Limited Data:
+
+Logistic regression tends to perform well when the dataset is not extremely large. If one has a moderate-sized dataset, logistic regression can provide robust results without requiring a massive amount of data. This efficiency can be advantageous, especially if one is working with limited resources or collecting data on MMA matches, which may not be as abundant as data in some other domains.
+
+2. Decision Tree Model 
+
+Interpretability:
+
+Decision trees offer a highly interpretable representation of decision-making processes. The model is essentially a tree-like flowchart where each node represents a decision based on a specific feature. This makes it easy to understand how the model arrives at a particular prediction. In projects related to MMA, interpretability can be crucial for gaining insights into which features or factors contribute most to predicting outcomes.
+Handling Non-linearity and Interaction:
+
+Decision trees are capable of capturing non-linear relationships and interactions between variables. In MMA, where the outcome of a match can depend on complex interactions between fighter attributes or match statistics, decision trees can be more flexible in capturing these patterns compared to linear models. They can identify intricate relationships that might be missed by simpler models.
+Feature Importance:
+
+Decision trees provide a natural way to assess the importance of different features in making predictions. By evaluating the splits in the tree, one can identify which features are most influential in determining outcomes. For a project related to MMA, understanding the importance of various fighter characteristics or match statistics can offer valuable insights into what makes a difference in winning or losing a fight.
+
+## Notebook To Script 
+Use the command line with the following steps:
+
+1. Open a terminal.
+
+2. Navigate to the directory where your Jupyter Notebook file is located.
+
+3. Run the following command:
+
+`jupyter nbconvert --to script your_notebook.ipynb`
+
+Replace your_notebook.ipynb with the name of your notebook file.
+
+4. This will generate a Python script in the same directory with the same name as your notebook, but with a `.py` extension.
+
+## Reproductibility
+
+
 
 ## Model Deployment
 
+To run Flask with your project, you need to follow these steps. First, make sure you have Python and pip installed on your system.
+
+Install Flask:
+Open a terminal or command prompt and run the following command to install Flask using pip:
+
+`pip install Flask`
+
+![image](https://github.com/ZehavaBatya/ultimate-fighting-championship/assets/84485729/20881d32-fce2-4593-ac8a-6bfbc0a0ca91)
+
+
 ## Dependency and Environment Management
+
 
 ## Containerization
 
@@ -98,6 +149,7 @@ Word Cloud: Word clouds provide an intuitive and visual representation of the mo
 ## Project Lessons
 
 ## Project Challenges
+1.
 
 ## Future Opportunities
 
